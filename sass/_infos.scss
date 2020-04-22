@@ -1,0 +1,72 @@
+.infosMapWrapper {
+  padding: 1rem;
+
+  .infosLogos {
+    .infos {
+      h2 {
+        text-decoration-line: underline;
+ 
+        margin-top: 0.5rem;
+      }
+      li {
+        a {
+          color: black;
+          font-size: 0.7rem;
+        }
+      }
+    }
+
+    .logos{
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      figure {
+        width: 30%;
+      }
+      img {
+        height: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .infosMapWrapper {
+    .infosLogos {
+      .infos {
+        display: flex;
+        flex-wrap: wrap;
+        div{
+          width: 50%;
+          padding-right: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .infosMapWrapper {
+    display: flex;
+
+    .infosLogos {
+      display: flex;
+      flex: 3;
+      flex-direction: column;
+      justify-content: space-between;
+      .infos {
+        div{
+          width: 25%;
+        }
+      }
+      .logos {
+        display: flex;
+
+      }
+    }
+    .map {
+      display: flex;
+      flex: 2;
+    }
+  }
+}
