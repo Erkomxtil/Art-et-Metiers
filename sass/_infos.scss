@@ -1,6 +1,5 @@
 .infosMapWrapper {
   padding: 1rem;
-
   .infosLogos {
     .infos {
       h2 {
@@ -15,16 +14,18 @@
         }
       }
     }
-
     .logos{
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
-      padding: 0.5rem 0;
+      padding: 2.5rem 0;
       figure {
-        width: 30%;
+        width: 100%;
+        margin: 1.5rem 0;
       }
       img {
-        height: 50px;
+        max-width: 100%;
+        height: auto;
       }
     }
   }
@@ -36,6 +37,73 @@
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
+    }
+    .infosMap {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      font-size: 0.7rem;
+      h2 {
+        display: none;
+      }
+      .btnCampus {
+        background-color: #EAEAEC;
+        color: #F29401;
+        padding: 0.5rem;
+        &::after {
+          content: '';
+          border-style: solid;
+          border-width: 1px 1px 0 0;
+          display: inline-block;
+          height: 5px;
+          left: 3px;
+          position: relative;
+          top: 4px;
+          vertical-align: top;
+          width: 5px;
+          animation: rotation 2s;
+          transform: rotate(-45deg);
+        }
+      }
+      .infosPlus {
+        display: none;
+        animation: slideout 2s;
+      }
+      &.active {
+        h2 {
+          display: block;
+          color: white;
+          padding-left: 30px;
+          width: 130px;
+          margin-bottom: 10px;
+        }
+        h2::before {
+          content: "";
+          height: 39px;
+          width: 27px;
+          display: block;
+          background-image: url(../image/logo-ecole.png);
+          position: absolute;
+          left: 0;
+          top: -10px;
+        }
+        p {
+          background-color: #EAEAEC;
+          padding: 0.5rem;
+        }
+        .btnCampus {
+          padding: 0;
+          &::after {
+            top: 0;
+            animation: rotationBtn 1s;
+            transform: rotate(135deg);
+          }
+        }
+        .infosPlus {
+          display: block;
+          animation: slidein 3s ;
+        }
+      }
     }
   }
 }
@@ -49,6 +117,12 @@
         div{
           width: 50%;
           padding-right: 0.5rem;
+        }
+      }
+      .logos {
+        flex-direction: row;
+        img{
+          width: 50%;
         }
       }
     }
@@ -78,5 +152,31 @@
       display: flex;
       flex: 2;
     }
+  }
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rotationBtn {
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(135deg);
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(135deg);
+  }
+  to {
+    transform: rotate(-45deg);
   }
 }
