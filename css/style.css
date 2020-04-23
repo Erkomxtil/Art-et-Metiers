@@ -90,6 +90,19 @@ a {
   height: 50px;
 }
 
+.infosMapWrapper .map {
+  overflow: hidden;
+  position: relative;
+  height: 450px;
+}
+
+.infosMapWrapper .map img {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 @media screen and (min-width: 600px) {
   .infosMapWrapper .infosLogos .infos {
     display: -webkit-box;
