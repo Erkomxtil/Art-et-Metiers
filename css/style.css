@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -57,14 +58,21 @@ a {
           box-sizing: border-box;
 }
 
+/* Couleur */
 .infosMapWrapper {
   padding: 1rem;
 }
 
+.infosMapWrapper .infosLogos .infos .ecole, .infosMapWrapper .infosLogos .infos .formation, .infosMapWrapper .infosLogos .infos .recherche, .infosMapWrapper .infosLogos .infos .entreprise {
+  margin-top: 10px;
+}
+
 .infosMapWrapper .infosLogos .infos h2 {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
   margin-top: 0.5rem;
+  display: inline-block;
+  border-bottom: 1px solid #8e2364;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .infosMapWrapper .infosLogos .infos li a {
@@ -124,9 +132,30 @@ a {
   background-color: #EAEAEC;
   color: #F29401;
   padding: 0.5rem;
+  cursor: pointer;
+}
+
+.infosMapWrapper .map .infosMap .btnCampus:hover {
+  background-color: #151521;
+  color: white;
 }
 
 .infosMapWrapper .map .infosMap .btnCampus::after {
+  content: '';
+  border-style: solid;
+  border-width: 1px 1px 0 0;
+  display: inline-block;
+  height: 5px;
+  left: 3px;
+  position: relative;
+  top: 4px;
+  vertical-align: top;
+  width: 5px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.infosMapWrapper .map .infosMap .btnCampus.out::after {
   content: '';
   border-style: solid;
   border-width: 1px 1px 0 0;
@@ -175,6 +204,8 @@ a {
 
 .infosMapWrapper .map .infosMap.active .btnCampus {
   padding: 0;
+  background-color: unset;
+  color: #F29401;
 }
 
 .infosMapWrapper .map .infosMap.active .btnCampus::after {
@@ -235,6 +266,9 @@ a {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .infosMapWrapper .infosLogos .infos .ecole, .infosMapWrapper .infosLogos .infos .formation, .infosMapWrapper .infosLogos .infos .recherche, .infosMapWrapper .infosLogos .infos .entreprise {
+    margin-top: unset;
+  }
   .infosMapWrapper .infosLogos .infos div {
     width: 25%;
   }
@@ -253,6 +287,7 @@ a {
   }
 }
 
+/* animation de la flèche */
 @-webkit-keyframes slidein {
   from {
     opacity: 0;
@@ -261,7 +296,6 @@ a {
     opacity: 1;
   }
 }
-
 @keyframes slidein {
   from {
     opacity: 0;

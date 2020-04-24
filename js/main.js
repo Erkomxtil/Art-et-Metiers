@@ -12,6 +12,7 @@ const btnCampus = () => {
       mapBright.style.filter = "brightness(1)"
     } else {
       infosPlus.classList.add("active")
+      btn.classList.add("out")
       mapBright.style.filter = "brightness(0.2)"
     }
   })

@@ -2,10 +2,15 @@
   padding: 1rem;
   .infosLogos {
     .infos {
+      .ecole, .formation, .recherche, .entreprise {
+        margin-top: 10px;
+      }
       h2 {
-        text-decoration-line: underline;
- 
         margin-top: 0.5rem;
+        display: inline-block;
+        border-bottom: 1px solid #8e2364;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
       }
       li {
         a {
@@ -47,9 +52,14 @@
         display: none;
       }
       .btnCampus {
-        background-color: #EAEAEC;
-        color: #F29401;
+        background-color: $beige;
+        color:$yellowLink;
         padding: 0.5rem;
+        cursor: pointer;
+        &:hover {
+          background-color: $darkBlue;
+          color: white;
+        }
         &::after {
           content: '';
           border-style: solid;
@@ -61,8 +71,23 @@
           top: 4px;
           vertical-align: top;
           width: 5px;
-          animation: rotation 2s;
           transform: rotate(-45deg);
+        }
+        &.out {
+          &::after {
+            content: '';
+            border-style: solid;
+            border-width: 1px 1px 0 0;
+            display: inline-block;
+            height: 5px;
+            left: 3px;
+            position: relative;
+            top: 4px;
+            vertical-align: top;
+            width: 5px;
+            animation: rotation 2s;
+            transform: rotate(-45deg);
+          }
         }
       }
       .infosPlus {
@@ -88,11 +113,13 @@
           top: -10px;
         }
         p {
-          background-color: #EAEAEC;
+          background-color: $beige;
           padding: 0.5rem;
         }
         .btnCampus {
           padding: 0;
+          background-color: unset;
+          color: $yellowLink;
           &::after {
             top: 0;
             animation: rotationBtn 1s;
@@ -139,6 +166,9 @@
       flex-direction: column;
       justify-content: space-between;
       .infos {
+        .ecole, .formation, .recherche, .entreprise {
+          margin-top: unset;
+        }
         div{
           width: 25%;
         }
@@ -155,6 +185,7 @@
   }
 }
 
+/* animation de la flèche */
 @keyframes slidein {
   from {
     opacity: 0;
