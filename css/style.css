@@ -59,11 +59,91 @@ a {
 }
 
 /* Couleur */
+#slider1 {
+  display: block;
+  height: 100vh;
+  width: 100%;
+  background: url("../image/slider1-1.jpg") no-repeat center center #000000;
+}
+
+@media screen and (min-width: 600px) {
+  .infosSlider1 {
+    padding: 6rem 0 0 10rem;
+    max-width: 34%;
+    position: relative;
+  }
+  .infosSlider1 ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .infosSlider1 ul li {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    background-color: #8e2364;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    -webkit-transform: skew(-30deg, 0);
+            transform: skew(-30deg, 0);
+  }
+  .infosSlider1 ul li a {
+    color: white;
+    -webkit-transform: skew(30deg, 0);
+            transform: skew(30deg, 0);
+  }
+  .infosSlider1 ul li.lienActif {
+    background-color: #F29401;
+  }
+  .infosSlider1 h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 2rem 0;
+  }
+  .infosSlider1 p {
+    font-size: 1.5rem;
+    font-weight: 200;
+    line-height: 1.6rem;
+  }
+  .infosSlider1 .lirePlus {
+    font-style: italic;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+    margin-top: 2rem;
+  }
+  .infosSlider1 .lirePlus a {
+    color: black;
+  }
+  .infosSlider1 .lirePlus a::before {
+    content: '';
+    border-style: solid;
+    border-width: 2px 2px 0 0;
+    display: inline-block;
+    height: 6px;
+    left: -10px;
+    position: relative;
+    top: 8px;
+    vertical-align: top;
+    width: 6px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+#slider2 {
+  height: 180px;
+  width: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
 .infosMapWrapper {
   padding: 1rem;
 }
 
-.infosMapWrapper .infosLogos .infos .ecole, .infosMapWrapper .infosLogos .infos .formation, .infosMapWrapper .infosLogos .infos .recherche, .infosMapWrapper .infosLogos .infos .entreprise {
+.infosMapWrapper .infosLogos .infos .ecole,
+.infosMapWrapper .infosLogos .infos .formation,
+.infosMapWrapper .infosLogos .infos .recherche,
+.infosMapWrapper .infosLogos .infos .entreprise {
   margin-top: 10px;
 }
 
@@ -92,16 +172,15 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 2.5rem 0;
-}
+  /*       figure {
+        width: 100%;
+        margin: 1.5rem 0;
+      }
 
-.infosMapWrapper .infosLogos .logos figure {
-  width: 100%;
-  margin: 1.5rem 0;
-}
-
-.infosMapWrapper .infosLogos .logos img {
-  max-width: 100%;
-  height: auto;
+      img {
+        max-width: 100%;
+        height: auto;
+      } */
 }
 
 .infosMapWrapper .map {
@@ -204,7 +283,7 @@ a {
 
 .infosMapWrapper .map .infosMap.active .btnCampus {
   padding: 0;
-  background-color: unset;
+  background-color: #EAEAEC;
   color: #F29401;
 }
 

@@ -1,10 +1,16 @@
 .infosMapWrapper {
   padding: 1rem;
+
   .infosLogos {
     .infos {
-      .ecole, .formation, .recherche, .entreprise {
+
+      .ecole,
+      .formation,
+      .recherche,
+      .entreprise {
         margin-top: 10px;
       }
+
       h2 {
         margin-top: 0.5rem;
         display: inline-block;
@@ -12,6 +18,7 @@
         padding-bottom: 20px;
         margin-bottom: 20px;
       }
+
       li {
         a {
           color: black;
@@ -19,47 +26,57 @@
         }
       }
     }
-    .logos{
+
+    .logos {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       padding: 2.5rem 0;
-      figure {
+
+/*       figure {
         width: 100%;
         margin: 1.5rem 0;
       }
+
       img {
         max-width: 100%;
         height: auto;
-      }
-    }
+      } */
+    } 
   }
+
   .map {
     overflow: hidden;
     position: relative;
     height: 450px;
+
     img {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
     }
+
     .infosMap {
       position: absolute;
       bottom: 20px;
       left: 20px;
       font-size: 0.7rem;
+
       h2 {
         display: none;
       }
+
       .btnCampus {
         background-color: $beige;
-        color:$yellowLink;
+        color: $yellowLink;
         padding: 0.5rem;
         cursor: pointer;
+
         &:hover {
           background-color: $darkBlue;
           color: white;
         }
+
         &::after {
           content: '';
           border-style: solid;
@@ -73,6 +90,7 @@
           width: 5px;
           transform: rotate(-45deg);
         }
+
         &.out {
           &::after {
             content: '';
@@ -90,10 +108,12 @@
           }
         }
       }
+
       .infosPlus {
         display: none;
         animation: slideout 2s;
       }
+
       &.active {
         h2 {
           display: block;
@@ -102,6 +122,7 @@
           width: 130px;
           margin-bottom: 10px;
         }
+
         h2::before {
           content: "";
           height: 39px;
@@ -112,23 +133,27 @@
           left: 0;
           top: -10px;
         }
+
         p {
           background-color: $beige;
           padding: 0.5rem;
         }
+
         .btnCampus {
           padding: 0;
-          background-color: unset;
+          background-color: $beige;
           color: $yellowLink;
+
           &::after {
             top: 0;
             animation: rotationBtn 1s;
             transform: rotate(135deg);
           }
         }
+
         .infosPlus {
           display: block;
-          animation: slidein 3s ;
+          animation: slidein 3s;
         }
       }
     }
@@ -141,14 +166,17 @@
       .infos {
         display: flex;
         flex-wrap: wrap;
-        div{
+
+        div {
           width: 50%;
           padding-right: 0.5rem;
         }
       }
+
       .logos {
         flex-direction: row;
-        img{
+
+        img {
           width: 50%;
         }
       }
@@ -165,19 +193,23 @@
       flex: 3;
       flex-direction: column;
       justify-content: space-between;
+
       .infos {
+
         .ecole, .formation, .recherche, .entreprise {
           margin-top: unset;
         }
-        div{
+
+        div {
           width: 25%;
         }
       }
+
       .logos {
         display: flex;
-
       }
     }
+
     .map {
       display: flex;
       flex: 2;
@@ -190,6 +222,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -199,14 +232,17 @@
   from {
     transform: rotate(-45deg);
   }
+
   to {
     transform: rotate(135deg);
   }
 }
+
 @keyframes rotation {
   from {
     transform: rotate(135deg);
   }
+
   to {
     transform: rotate(-45deg);
   }
