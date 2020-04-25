@@ -61,75 +61,121 @@ a {
 /* Couleur */
 #slider1 {
   display: block;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background: url("../image/slider1-1.jpg") no-repeat center center #000000;
   position: relative;
 }
 
+#slider1 .infosSlider1 {
+  color: white;
+  padding: 1.2rem;
+}
+
+#slider1 .infosSlider1 ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#slider1 .infosSlider1 ul li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-color: #8e2364;
+  padding: 0.5rem 1rem;
+}
+
+#slider1 .infosSlider1 ul li a {
+  color: white;
+}
+
+#slider1 .infosSlider1 ul li.lienActif {
+  background-color: #F29401;
+}
+
+#slider1 .infosSlider1 h1, #slider1 .infosSlider1 p {
+  text-shadow: 1px 2px 2px gray;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+}
+
+#slider1 .infosSlider1 .lirePlus {
+  font-style: italic;
+  font-size: 1rem;
+  padding-left: 2rem;
+}
+
+#slider1 .infosSlider1 .lirePlus a {
+  color: white;
+}
+
+#slider1 .infosSlider1 .lirePlus a::before {
+  content: '';
+  border-style: solid;
+  border-width: 2px 2px 0 0;
+  display: inline-block;
+  height: 6px;
+  left: -5px;
+  position: relative;
+  top: 4px;
+  vertical-align: top;
+  width: 6px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
 @media screen and (min-width: 600px) {
-  .infosSlider1 {
+  #slider1 {
+    height: 100vh;
+  }
+  #slider1 .infosSlider1 {
     padding: 6rem 0 0 10rem;
-    max-width: 34%;
+    max-width: 80%;
     position: relative;
   }
-  .infosSlider1 ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  #slider1 .infosSlider1 ul {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
-  .infosSlider1 ul li {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    background-color: #8e2364;
-    padding: 0.5rem 1rem;
+  #slider1 .infosSlider1 ul li {
     margin-right: 0.5rem;
     -webkit-transform: skew(-30deg, 0);
             transform: skew(-30deg, 0);
   }
-  .infosSlider1 ul li a {
+  #slider1 .infosSlider1 ul li a {
     color: white;
     -webkit-transform: skew(30deg, 0);
             transform: skew(30deg, 0);
   }
-  .infosSlider1 ul li.lienActif {
+  #slider1 .infosSlider1 ul li.lienActif {
     background-color: #F29401;
   }
-  .infosSlider1 h1 {
+  #slider1 .infosSlider1 h1, #slider1 .infosSlider1 p {
+    background-color: transparent;
+  }
+  #slider1 .infosSlider1 h1 {
     font-size: 2rem;
     font-weight: bold;
     margin: 2rem 0;
   }
-  .infosSlider1 p {
+  #slider1 .infosSlider1 p {
     font-size: 1.5rem;
     font-weight: 200;
     line-height: 1.6rem;
   }
-  .infosSlider1 .lirePlus {
-    font-style: italic;
-    font-size: 1rem;
-    padding-left: 0.5rem;
-    margin-top: 2rem;
+  #slider1 .infosSlider1 .lirePlus {
+    padding-left: 2rem;
   }
-  .infosSlider1 .lirePlus a {
-    color: black;
-  }
-  .infosSlider1 .lirePlus a::before {
-    content: '';
-    border-style: solid;
-    border-width: 2px 2px 0 0;
-    display: inline-block;
-    height: 6px;
-    left: -10px;
-    position: relative;
+  #slider1 .infosSlider1 .lirePlus a::before {
     top: 8px;
-    vertical-align: top;
-    width: 6px;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+    left: -6px;
   }
-  .fleche {
+  #slider1 .fleche {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -141,7 +187,7 @@ a {
     height: 40px;
     width: 40px;
   }
-  .fleche::before {
+  #slider1 .fleche::before {
     content: '';
     border-color: #F29401;
     border-style: solid;
@@ -157,6 +203,12 @@ a {
             transform: rotate(135deg);
     -webkit-animation: arrowMove 1s infinite ease-in-out;
             animation: arrowMove 1s infinite ease-in-out;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #slider1 .infosSlider1 {
+    max-width: 50%;
   }
 }
 

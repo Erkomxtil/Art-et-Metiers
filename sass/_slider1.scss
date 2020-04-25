@@ -1,61 +1,47 @@
 #slider1 {
   display: block;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background: url("../image/slider1-1.jpg") no-repeat center center #000000;
   position: relative;
-}
-
-@media screen and (min-width: 600px) {
   .infosSlider1 {
-    padding: 6rem 0 0 10rem;
-    max-width: 34%;
-    position: relative;
+    color:white;
+    padding: 1.2rem;
     ul {
       display: flex;
+      justify-content: space-between;
       li {
         display: inline-flex;
         background-color: $purple;
         padding: 0.5rem 1rem;
-        margin-right: 0.5rem;
-        transform: skew(-30deg,0);
         a{
           color: white;
-          transform: skew(30deg,0);
         }
         &.lienActif {
           background-color: $yellowLink;
-          
         }
       }
-
     }
-    h1 {
-      font-size: 2rem;
-      font-weight: bold;
-      margin: 2rem 0;
-    }
-    p {
-      font-size: 1.5rem;
-      font-weight: 200;
-      line-height: 1.6rem;
+    h1, p {
+      text-shadow: 1px 2px 2px gray;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 1.5rem;
     }
     .lirePlus {
       font-style: italic;
       font-size: 1rem;
-      padding-left: 0.5rem;
-      margin-top: 2rem;
+      padding-left: 2rem;
       a {
-        color: black;
+        color: white;
         &::before {
           content: '';
           border-style: solid;
           border-width: 2px 2px 0 0;
           display: inline-block;
           height: 6px;
-          left: -10px;
+          left: -5px;
           position: relative;
-          top: 8px;
+          top: 4px;
           vertical-align: top;
           width: 6px;
           transform: rotate(45deg);
@@ -63,29 +49,85 @@
       }      
     }
   }
-  .fleche {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    height: 40px;
-    width: 40px;
+}
 
-    &::before {
-      content: '';
-      border-color: $yellowLink;
-      border-style: solid;
-      border-width: 4px 4px 0 0;
-      display: inline-block;
-      height: 30px;
-      left: 0px;
+@media screen and (min-width: 600px) {
+  #slider1 {
+    height: 100vh;
+    .infosSlider1 {
+      padding: 6rem 0 0 10rem;
+      max-width: 80%;
       position: relative;
-      top: -20px;
-      vertical-align: top;
-      width: 30px;
-      transform: rotate(135deg);
-      animation: arrowMove 1s infinite ease-in-out;
+      ul {
+        justify-content: flex-start;
+        li {
+          margin-right: 0.5rem;
+          transform: skew(-30deg,0);
+          a{
+            color: white;
+            transform: skew(30deg,0);
+          }
+          &.lienActif {
+            background-color: $yellowLink;
+          }
+        }
+  
+      }
+      h1, p {
+        background-color: transparent;
+      }
+      h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 2rem 0;
+      }
+      p {
+        font-size: 1.5rem;
+        font-weight: 200;
+        line-height: 1.6rem;
+      }
+      .lirePlus {
+        padding-left: 2rem;
+        a {
+          &::before {
+            top: 8px;
+            left: -6px;
+          }
+        }      
+      }
+    }
+    .fleche {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      height: 40px;
+      width: 40px;
+  
+      &::before {
+        content: '';
+        border-color: $yellowLink;
+        border-style: solid;
+        border-width: 4px 4px 0 0;
+        display: inline-block;
+        height: 30px;
+        left: 0px;
+        position: relative;
+        top: -20px;
+        vertical-align: top;
+        width: 30px;
+        transform: rotate(135deg);
+        animation: arrowMove 1s infinite ease-in-out;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #slider1 {
+    .infosSlider1 {
+      max-width: 50%;
     }
   }
 }

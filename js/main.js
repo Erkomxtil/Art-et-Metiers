@@ -98,7 +98,6 @@ function slider1 () {
     indicateurImage = 0
   }
 
-
   imageBackground.style.backgroundImage = 'url("'+ imageTableau[indicateurImage].image +'")'
   title.textContent = imageTableau[indicateurImage].title
   paragraphe.textContent = imageTableau[indicateurImage].text
