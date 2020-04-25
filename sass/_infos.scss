@@ -33,15 +33,13 @@
       justify-content: space-between;
       padding: 2.5rem 0;
 
-/*       figure {
-        width: 100%;
-        margin: 1.5rem 0;
+      figure {
+        margin: 2rem 0;        
+        img {
+          width: 100%;
+          height: auto;
+        }
       }
-
-      img {
-        max-width: 100%;
-        height: auto;
-      } */
     } 
   }
 
@@ -177,7 +175,8 @@
         flex-direction: row;
 
         img {
-          width: 50%;
+          max-width: 180px;
+          margin-right: 20px;
         }
       }
     }
