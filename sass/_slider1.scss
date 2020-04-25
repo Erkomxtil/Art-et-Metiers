@@ -3,7 +3,7 @@
   height: 100vh;
   width: 100%;
   background: url("../image/slider1-1.jpg") no-repeat center center #000000;
-
+  position: relative;
 }
 
 @media screen and (min-width: 600px) {
@@ -62,5 +62,43 @@
         }
       }      
     }
+  }
+  .fleche {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    height: 40px;
+    width: 40px;
+
+    &::before {
+      content: '';
+      border-color: $yellowLink;
+      border-style: solid;
+      border-width: 4px 4px 0 0;
+      display: inline-block;
+      height: 30px;
+      left: 0px;
+      position: relative;
+      top: -20px;
+      vertical-align: top;
+      width: 30px;
+      transform: rotate(135deg);
+      animation: arrowMove 1s infinite ease-in-out;
+    }
+  }
+}
+
+/* Animation de la flèche pour le scroll */
+@keyframes arrowMove {
+  0% {
+    top: -4px;
+  }
+  50% {
+    top: -20px;
+  }
+  100% {
+    top: -4px;
   }
 }
