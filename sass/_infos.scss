@@ -34,13 +34,14 @@
       padding: 2.5rem 0;
 
       figure {
-        margin: 2rem 0;        
+        margin: 2rem 0;
+
         img {
           width: 100%;
           height: auto;
         }
       }
-    } 
+    }
   }
 
   .map {
@@ -195,7 +196,10 @@
 
       .infos {
 
-        .ecole, .formation, .recherche, .entreprise {
+        .ecole,
+        .formation,
+        .recherche,
+        .entreprise {
           margin-top: unset;
         }
 

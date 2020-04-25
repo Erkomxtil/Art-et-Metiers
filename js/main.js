@@ -132,3 +132,17 @@ function slider1 () {
   }
 }
 setInterval("slider1()", 8000)
+
+/* Enlève la flèche du bas au scroll de l'utilisateur */
+function flecheOut () {
+  var scrollUser = window.scrollY
+  var flecheDown = document.querySelector(".fleche")
+
+  if (scrollUser > 0 ) {
+    flecheDown.style.display = "none"
+  } else {
+    flecheDown.style.display = "block"
+  }
+}
+
+window.onscroll = flecheOut

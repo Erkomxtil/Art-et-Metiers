@@ -452,7 +452,10 @@ a {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .infosMapWrapper .infosLogos .infos .ecole, .infosMapWrapper .infosLogos .infos .formation, .infosMapWrapper .infosLogos .infos .recherche, .infosMapWrapper .infosLogos .infos .entreprise {
+  .infosMapWrapper .infosLogos .infos .ecole,
+  .infosMapWrapper .infosLogos .infos .formation,
+  .infosMapWrapper .infosLogos .infos .recherche,
+  .infosMapWrapper .infosLogos .infos .entreprise {
     margin-top: unset;
   }
   .infosMapWrapper .infosLogos .infos div {
