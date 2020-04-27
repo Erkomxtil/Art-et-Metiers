@@ -146,3 +146,45 @@ function flecheOut () {
 }
 
 window.onscroll = flecheOut
+
+/* Gestion du slider2 -------------------------------------------------- */
+function slider2 () {
+  var fleche1 = document.querySelector(".fleche1")
+  var fleche2 = document.querySelector(".fleche2")
+  var curseurSlide = 0
+  
+  fleche1.addEventListener("click", function (e) {
+    e.preventDefault()
+    if (curseurSlide <  0 || curseurSlide === 0) {
+      curseurSlide = 1
+      var first = document.querySelector("#slider2 .slider2Block.slide2")
+      first.style.left = "0%"
+    }
+    curseurSlide++
+    var slide = document.querySelector("#slider2 .slider2Block.slide" + curseurSlide )
+    
+    if (curseurSlide > 5) {
+      curseurSlide = 5 
+    }
+    if (curseurSlide > 0 && slide !== null) {
+      slide.style.left = "0%"
+    }
+  })
+  fleche2.addEventListener("click", function (e) {
+    e.preventDefault()
+    var slide = document.querySelector(".slide" + curseurSlide )
+    curseurSlide--
+    if (curseurSlide > 5 ) {
+      curseurSlide = 5
+    }
+    if (slide !== null) {
+      slide.style.left = "100%"
+    }
+    if (curseurSlide < 1 && slide !== null) {
+      curseurSlide = 1
+      slide.style.left = "0%"
+    }
+  })
+}
+
+slider2()

@@ -1,5 +1,91 @@
+@mixin flecheSlide {
+  content: '';
+  border-style: solid;
+  border-width: 1px 1px 0 0;
+  border-color: white;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  height: 10px;
+  width: 10px;
+}
 #slider2 {
   height: 180px;
   width: auto;
-  background-color: rgba($color: #000000, $alpha: 0.6);
+  background-color: black;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  .fleche1, .fleche2 {
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+  }
+  .fleche1 {
+    order: 6;
+    left: 0;
+    color: white;
+    &::before {
+      @include flecheSlide;
+      top: -6px;
+      left: 10px;
+      transform: rotate(-135deg);
+    }
+  }
+  .fleche2 {
+    order: 7;
+    right: 0;
+    &::after {
+      @include flecheSlide;
+      top: -6px;
+      left: -10px;
+      transform: rotate(45deg);
+    }
+  }
+  .slider2Block {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    color: white;
+    padding: 1.5rem;
+    transition: left 2s;
+    background: black;
+    @for $i from 0 to 5 {
+      &.slide#{$i + 1}{
+        left: 100%*$i;
+      }
+    }
+    h2 {
+      color: $yellowLink;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+    }
+    .svgslider {
+      fill: white;
+      margin-left: 0.5rem;
+    }
+    p {
+    }
+    .lirePlus {
+      display: flex;
+      padding: 1rem 0 0 0.4rem;
+      color: white;
+      font-size: 0.6rem;
+      font-style: italic;
+      &::before {
+        content: '';
+        border-style: solid;
+        border-width: 1px 1px 0 0;
+        display: inline-block;
+        height: 4px;
+        left: -6px;
+        position: relative;
+        top: 1px;
+        vertical-align: top;
+        width: 4px;
+        transform: rotate(45deg);
+      }
+    }
+  }
 }
