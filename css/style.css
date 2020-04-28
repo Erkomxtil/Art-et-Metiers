@@ -250,6 +250,7 @@ a {
 #slider2 .fleche1, #slider2 .fleche2 {
   position: absolute;
   bottom: 0;
+  height: 13px;
   cursor: pointer;
 }
 
@@ -757,6 +758,11 @@ footer .credit {
             justify-content: center;
     font-size: 0.8rem;
   }
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Regular.ttf");
 }
 
 body {
