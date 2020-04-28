@@ -60,6 +60,7 @@
       position: relative;
       ul {
         justify-content: flex-start;
+        padding-left: 2.188rem;
         li {
           margin-right: 0.5rem;
           transform: skew(-30deg,0);
@@ -85,6 +86,7 @@
         font-size: 1.5rem;
         font-weight: 200;
         line-height: 1.6rem;
+        padding: 0 0 1rem 1.5rem;
       }
       .lirePlus {
         padding-left: 2rem;
