@@ -16,6 +16,7 @@
   overflow: hidden;
   display: flex;
   position: relative;
+  margin: auto 0;
   .fleche1, .fleche2 {
     position: absolute;
     bottom: 0;
@@ -26,6 +27,7 @@
     order: 6;
     left: 0;
     color: white;
+    z-index: 1;
     &::before {
       @include flecheSlide;
       top: -6px;
@@ -36,7 +38,7 @@
   .fleche2 {
     order: 7;
     right: 0;
-    &::after {
+    &::before {
       @include flecheSlide;
       top: -6px;
       left: -10px;
@@ -86,6 +88,62 @@
         vertical-align: top;
         width: 4px;
         transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px){
+  #slider2 {
+    .fleche1, .fleche2 {
+      height: 180px;
+      width: 5%;
+      &::before {
+        top: 50%;
+      }
+    }
+    .fleche1 {
+      order: 1;
+      &::before {
+        left: 35%;
+        transform: rotate(-135deg) translate(-50%, 50%);
+      }
+    }
+    .fleche2 {
+      &::before {
+        left: calc(50% - 10px);
+        transform: rotate(45deg) translate(50%, -50%);
+      }
+    }
+    .slider2Block {
+      width: 30%;
+      height: 100%;
+      &.slide1, &.slide2 {
+        &::after {
+          content: "";
+          height: 130px;
+          width: 1px;
+          display: block;
+          background: white;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+        }
+      }
+      &.slide1 {
+        left: 5%;
+      }
+      @for $i from 1 to 4 {
+        &.slide#{$i + 1 } {
+          left: (30%*$i) + 5%;
+        }
+      }
+      &.slide4, &.slide5 {
+        display: none;
+      }
+      p {
+        font-size: 0.8rem;
       }
     }
   }

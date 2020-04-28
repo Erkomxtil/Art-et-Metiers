@@ -148,7 +148,8 @@ function flecheOut () {
 window.onscroll = flecheOut
 
 /* Gestion du slider2 -------------------------------------------------- */
-function slider2 () {
+/* Script à tester seulement pour la partie mobile  */
+/* function slider2 () {
   var fleche1 = document.querySelector(".fleche1")
   var fleche2 = document.querySelector(".fleche2")
   var curseurSlide = 0
@@ -185,6 +186,4 @@ function slider2 () {
       slide.style.left = "0%"
     }
   })
-}
-
-slider2()
+} */
