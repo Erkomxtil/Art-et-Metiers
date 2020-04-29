@@ -183,7 +183,7 @@ setInterval("slider1()", 8000)
 
 /* Enlève la flèche du bas au scroll de l'utilisateur */
 function flecheOut() {
-  var scrollUser = window.scrollY
+  var scrollUser = document.documentElement.scrollTop
   var flecheDown = document.querySelector(".fleche")
 
   if (scrollUser > 0) {
@@ -194,6 +194,20 @@ function flecheOut() {
 }
 
 window.onscroll = flecheOut
+
+/* Effet parallax slider1 */
+function parallax() {
+  window.addEventListener("scroll", function () {
+    var backgroundSlider1 = document.getElementById("slider1")
+    var userScroll = document.documentElement.scrollTop
+
+    if (userScroll > 0) {
+      backgroundSlider1.style.backgroundPositionY = userScroll * 0.05 + "px"
+    }
+  })
+}
+
+parallax()
 
 /* Gestion du slider2 -------------------------------------------------- */
 /* Script à tester seulement pour la partie mobile  */
