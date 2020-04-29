@@ -25,7 +25,22 @@
   <title>Ecole Nationale Supérieur des Arts et Métiers</title>
 </head>
 <body>
-  <header>  
+  <header> 
+    <nav id="mainNav">
+        <div class="mainLogo">
+          <a href="#">
+            <img src="image/logo-ecole.png" alt="Logo">
+          </a>
+        </div>
+        <div class="navLiens">
+          <div class="burger"></div>
+          <ul>
+            <li><a id="accueil" href="#">Ecole</a></li>
+            <li><a id="realisations" href="#">Formation</a></li>
+            <li><a id="contact" href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav> 
     <div id="slider1"></div>
     <div id="slider2">
       <div class="flecheSlider2 fleche1"></div>
@@ -177,7 +192,16 @@
     </div>
     <div class="credit">Agence Fidesio</div>
   </footer>
-
+  <div id="modalLink">
+      <nav id="mobileNav">
+        <ul>
+          <li><a class="ecole" href="#">Ecole</a></li>
+          <li><a class="formation" href="#">Formation</a></li>
+          <li><a class="contact" href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="close"></div>
+  </div>
   <script src="js/main.js"></script>
 </body>
 </html>
