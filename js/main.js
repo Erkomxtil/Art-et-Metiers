@@ -77,19 +77,19 @@ btnCampus();
 var imageTableau = [{
     title: "Un printemps Robotique à Arts et Métiers",
     text: "Le campus Arts et Métiers de Lille, se positionne comme un acteur incontournable de la robotique par ses activités de formation, de recherche et de transfert technologique.",
-    image: "../image/slider1-1.jpg",
+    image: "image/slider1-1.jpg",
     id: 1
   },
   {
     title: "Arts et Métiers, tous mobilisés pour aider les soignants !",
     text: "Face à la pénurie de matériel médical, Arts et Métiers se mobilise. Enseignants-chercheurs, personnels et étudiants Arts et Métiers produisent du matériel à destination des soignants et des malades atteints du Covid-19.",
-    image: "../image/slider1-2.jpg",
+    image: "image/slider1-2.jpg",
     id: 2
   },
   {
     title: "Le grand établissement de technologie",
     text: "Depuis sa création en 1780, Arts et Métiers s’attache à répondre aux défis industriels et aux enjeux sociétaux, en constante évolution. Sa première mission ? Former des ingénieurs spécialistes des technologies durables",
-    image: "../image/slider1-3.jpg",
+    image: "image/slider1-3.jpg",
     id: 3
   }
 ]
